@@ -1,0 +1,126 @@
+.previous-items {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    max-width: 200%;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+}
+
+.previous-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    cursor: pointer;
+    scroll-snap-align: start;
+    min-width: 2.5rem;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.previous-item:last-of-type {
+    margin-right: 0;
+}
+
+.previous-item img,
+.previous-item video {
+    max-width: 100%;
+}
+
+.previous-item-details {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.previous-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.previous-item-author,
+.previous-item-date {
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .previous-items {
+        display: flex;
+        overflow-x: scroll;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        max-width: 100%;
+        justify-content: center;
+        scroll-snap-type: x mandatory;
+    }
+
+    .previous-item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        cursor: pointer;
+        scroll-snap-align: start;
+        min-width: 30%;
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .previous-item:last-of-type {
+        margin-right: 0;
+    }
+
+    .previous-item img,
+    .previous-item video {
+        max-width: 100%;
+    }
+
+    .previous-item-details {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .previous-item-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .previous-item-author,
+    .previous-item-date {
+        margin-bottom: 5px;
+    }
+
+    .overlay img,
+    .overlay video {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+    .overlay-details {
+        font-size: 24px;
+    }
+
+    .overlay-details h2 {
+        font-size: 32px;
+    }
+
+    .overlay-details p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .overlay-details button {
+        font-size: 20px;
+        padding: 15px 30px;
+        margin-top: 30px;
+    }
+}

@@ -24,7 +24,7 @@ function Previous() {
 
     return (
         <div>
-            <div className="spotlight">
+            {/* <div className="spotlight">
                 <h2>{data[0]?.title}</h2>
                 <a href={data[0]?.url} target="_blank" rel="noopener noreferrer">
                     {data[0]?.media_type === 'image' ? (
@@ -35,22 +35,20 @@ function Previous() {
                 </a>
                 <p>{data[0]?.explanation}</p>
                 <p>Author: {data[0]?.copyright}</p>
-            </div>
-            <h3>Recent Items</h3>
-            <div className="previous-items">
+            </div> */}
+            <h2>Recent Items</h2>
+            <div className="previous-items" >
                 {data.slice(1).map(item => (
                     <div key={item.date} className="previous-item">
-                        <a href={item.url} target="_blank" rel="noopener noreferrer">
-                            {item.media_type === 'image' ? (
-                                <img src={item.thumbnail_url} alt={item.title} onClick={() => handleItemSelect(item)} />
-                            ) : (
-                                <video src={item.thumbnail_url} alt={item.title} onClick={() => handleItemSelect(item)} />
-                            )}
-                        </a>
+                        {item.media_type === 'image' ? (
+                            <img src={item.url} alt={item.title} onClick={() => handleItemSelect(item)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        ) : (
+                            <video src={item.url} alt={item.title} onClick={() => handleItemSelect(item)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        )}
                         <div className="previous-item-details">
                             <p className="previous-item-title">{item.title}</p>
-                            <p className="previous-item-author">Author: {item.copyright}</p>
-                            <p className="previous-item-date">Date: {item.date}</p>
+                            <p className="previous-item-author">{item.author}</p>
+                            <p className="previous-item-date">{item.date}</p>
                         </div>
                     </div>
                 ))}
@@ -71,6 +69,7 @@ function Previous() {
                     <button onClick={handleOverlayClose}>Close</button>
                 </div>
             )}
+            <br></br>
         </div>
     );
 }

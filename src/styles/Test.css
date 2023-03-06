@@ -1,0 +1,22 @@
+.spotlight-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.spotlight-text {
+    flex: 2;
+}
+
+.spotlight-media {
+    flex: 1;
+    text-align: right;
+}
+
+.spotlight-media img,
+.spotlight-media video {
+    display: block;
+    width: 400px;
+    height: 250px;
+    margin: 10px;
+}
+

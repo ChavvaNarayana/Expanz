@@ -11,6 +11,7 @@
 .previous-item {
     display: flex;
     flex-direction: column;
+    /* height: 300px;  */
     margin-right: 10px;
     cursor: pointer;
     scroll-snap-align: start;
@@ -123,4 +124,13 @@
         padding: 15px 30px;
         margin-top: 30px;
     }
+}
+
+.previous-item-details {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.previous-item:hover .previous-item-details {
+    opacity: 1;
 }

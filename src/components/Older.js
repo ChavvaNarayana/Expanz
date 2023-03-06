@@ -107,7 +107,7 @@ function App() {
                         )}
                         <div className="previous-item-details2">
                             <p className="previous-item-title2">{item.title}</p>
-                            <p className="previous-item-author2">Author: {item.author}</p>
+                            <p className="previous-item-author2">Author: {item.copyright}</p>
                             <p className="previous-item-date2">Date: {item.date}</p>
                         </div>
                     </div>
